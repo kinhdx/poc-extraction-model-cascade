@@ -1,0 +1,24 @@
+[project]
+name = "poc-extraction-model-cascade"
+version = "0.1.0"
+description = "Time-boxed proof of concept: small-to-large model cascade for loan document extraction, triggered by rule findings"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["loan-dossier-intake"]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+loan-dossier-intake = { path = "../loan-dossier-intake", editable = true }
+
+[dependency-groups]
+dev = ["ruff>=0.17.0", "pytest>=9.1.1"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]

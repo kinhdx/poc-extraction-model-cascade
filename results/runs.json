@@ -1,0 +1,4453 @@
+[
+ {
+  "strategy": "single:claude-haiku-5-5",
+  "summary": {
+   "standard": {
+    "dossiers": 30,
+    "decision_accuracy_pct": 100.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 0.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 100.0,
+    "cost_per_dossier_usd": 0.0013,
+    "latency_p50_s": 4.17,
+    "latency_p95_s": 6.59,
+    "total_cost_usd": 0.0383,
+    "escalated": 0
+   },
+   "stress": {
+    "dossiers": 10,
+    "decision_accuracy_pct": 50.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 100.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 83.6,
+    "cost_per_dossier_usd": 0.0024,
+    "latency_p50_s": 8.53,
+    "latency_p95_s": 8.95,
+    "total_cost_usd": 0.0236,
+    "escalated": 0
+   }
+  },
+  "rows": [
+   {
+    "dossier": "D001",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00171,
+    "seconds": 5.66,
+    "tokens_in": 12266,
+    "tokens_out": 957,
+    "escalated": false
+   },
+   {
+    "dossier": "D002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 4.61,
+    "tokens_in": 6466,
+    "tokens_out": 978,
+    "escalated": false
+   },
+   {
+    "dossier": "D003",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00187,
+    "seconds": 7.5,
+    "tokens_in": 12258,
+    "tokens_out": 1297,
+    "escalated": false
+   },
+   {
+    "dossier": "D004",
+    "defect": "INCOME_BELOW_MINIMUM",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 4.38,
+    "tokens_in": 6584,
+    "tokens_out": 951,
+    "escalated": false
+   },
+   {
+    "dossier": "D005",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00125,
+    "seconds": 4.44,
+    "tokens_in": 6466,
+    "tokens_out": 1210,
+    "escalated": false
+   },
+   {
+    "dossier": "D006",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.78,
+    "tokens_in": 6350,
+    "tokens_out": 994,
+    "escalated": false
+   },
+   {
+    "dossier": "D007",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00112,
+    "seconds": 3.69,
+    "tokens_in": 6334,
+    "tokens_out": 972,
+    "escalated": false
+   },
+   {
+    "dossier": "D008",
+    "defect": "DOB_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00172,
+    "seconds": 6.36,
+    "tokens_in": 12270,
+    "tokens_out": 984,
+    "escalated": false
+   },
+   {
+    "dossier": "D009",
+    "defect": "MISSING_DOCUMENT",
+    "expected_decision": "incomplete",
+    "decision": "incomplete",
+    "decision_ok": true,
+    "expected_findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 2,
+    "classified_ok": 2,
+    "fields_total": {
+     "text": 9,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 9,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00079,
+    "seconds": 3.91,
+    "tokens_in": 4497,
+    "tokens_out": 685,
+    "escalated": false
+   },
+   {
+    "dossier": "D010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.78,
+    "tokens_in": 6516,
+    "tokens_out": 964,
+    "escalated": false
+   },
+   {
+    "dossier": "D011",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.73,
+    "tokens_in": 6620,
+    "tokens_out": 1337,
+    "escalated": false
+   },
+   {
+    "dossier": "D012",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00132,
+    "seconds": 4.55,
+    "tokens_in": 6600,
+    "tokens_out": 1313,
+    "escalated": false
+   },
+   {
+    "dossier": "D013",
+    "defect": "PAYSLIP_NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 3.77,
+    "tokens_in": 6616,
+    "tokens_out": 962,
+    "escalated": false
+   },
+   {
+    "dossier": "D014",
+    "defect": "AGE_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.25,
+    "tokens_in": 6620,
+    "tokens_out": 1337,
+    "escalated": false
+   },
+   {
+    "dossier": "D015",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 3.52,
+    "tokens_in": 6474,
+    "tokens_out": 976,
+    "escalated": false
+   },
+   {
+    "dossier": "D016",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00131,
+    "seconds": 4.94,
+    "tokens_in": 6496,
+    "tokens_out": 1327,
+    "escalated": false
+   },
+   {
+    "dossier": "D017",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00115,
+    "seconds": 3.81,
+    "tokens_in": 6640,
+    "tokens_out": 969,
+    "escalated": false
+   },
+   {
+    "dossier": "D018",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.66,
+    "tokens_in": 6644,
+    "tokens_out": 1338,
+    "escalated": false
+   },
+   {
+    "dossier": "D019",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.8,
+    "tokens_in": 6454,
+    "tokens_out": 976,
+    "escalated": false
+   },
+   {
+    "dossier": "D020",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 3.77,
+    "tokens_in": 6468,
+    "tokens_out": 989,
+    "escalated": false
+   },
+   {
+    "dossier": "D021",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00111,
+    "seconds": 3.7,
+    "tokens_in": 6328,
+    "tokens_out": 963,
+    "escalated": false
+   },
+   {
+    "dossier": "D022",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.73,
+    "tokens_in": 6456,
+    "tokens_out": 974,
+    "escalated": false
+   },
+   {
+    "dossier": "D023",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.67,
+    "tokens_in": 6620,
+    "tokens_out": 1336,
+    "escalated": false
+   },
+   {
+    "dossier": "D024",
+    "defect": "EMPLOYER_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.75,
+    "tokens_in": 6350,
+    "tokens_out": 981,
+    "escalated": false
+   },
+   {
+    "dossier": "D025",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.89,
+    "tokens_in": 6462,
+    "tokens_out": 969,
+    "escalated": false
+   },
+   {
+    "dossier": "D026",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.67,
+    "tokens_in": 6466,
+    "tokens_out": 974,
+    "escalated": false
+   },
+   {
+    "dossier": "D027",
+    "defect": "AMOUNT_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 4.08,
+    "tokens_in": 6504,
+    "tokens_out": 967,
+    "escalated": false
+   },
+   {
+    "dossier": "D028",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00191,
+    "seconds": 6.59,
+    "tokens_in": 12258,
+    "tokens_out": 1367,
+    "escalated": false
+   },
+   {
+    "dossier": "D029",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00171,
+    "seconds": 7.56,
+    "tokens_in": 12256,
+    "tokens_out": 961,
+    "escalated": false
+   },
+   {
+    "dossier": "D030",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00127,
+    "seconds": 4.53,
+    "tokens_in": 6346,
+    "tokens_out": 1266,
+    "escalated": false
+   },
+   {
+    "dossier": "H001",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRED",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "DƯƠNG THÙY LINH",
+      "got": "DƯƠNG THỦY LINH"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "02/07/1986",
+      "got": "02/01/1998"
+     }
+    ],
+    "cost_usd": 0.00226,
+    "seconds": 7.42,
+    "tokens_in": 12262,
+    "tokens_out": 2065,
+    "escalated": false
+   },
+   {
+    "dossier": "H002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRED",
+     "ID_MISMATCH",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRED",
+     "ID_MISMATCH",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 11
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "08/01/1994",
+      "got": "08/03/1984"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "id_number",
+      "expected": "031094354392",
+      "got": "031094354352"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "08/01/2034",
+      "got": "08/03/2024"
+     }
+    ],
+    "cost_usd": 0.00222,
+    "seconds": 8.89,
+    "tokens_in": 12262,
+    "tokens_out": 1996,
+    "escalated": false
+   },
+   {
+    "dossier": "H003",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "22/07/1989",
+      "got": "22/03/1983"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "22/07/2029",
+      "got": "22/03/2029"
+     }
+    ],
+    "cost_usd": 0.00231,
+    "seconds": 7.25,
+    "tokens_in": 12262,
+    "tokens_out": 2177,
+    "escalated": false
+   },
+   {
+    "dossier": "H004",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 11
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY MAI",
+      "got": "NGÔ THÚY MAI"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1987",
+      "got": "16/11/1987"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "15/07/2027",
+      "got": "10/05/2027"
+     }
+    ],
+    "cost_usd": 0.00232,
+    "seconds": 7.81,
+    "tokens_in": 12256,
+    "tokens_out": 2193,
+    "escalated": false
+   },
+   {
+    "dossier": "H005",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "DƯƠNG THÙY YẾN",
+      "got": "DƯƠNG THÚY YẾN"
+     }
+    ],
+    "cost_usd": 0.00248,
+    "seconds": 8.61,
+    "tokens_in": 12256,
+    "tokens_out": 2516,
+    "escalated": false
+   },
+   {
+    "dossier": "H006",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "INCOME_ABOVE_PAYSLIP",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "HỒ THÙY LAN",
+      "got": "HỒ THÚY LAN"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1983",
+      "got": "15/03/1983"
+     }
+    ],
+    "cost_usd": 0.00231,
+    "seconds": 8.22,
+    "tokens_in": 12264,
+    "tokens_out": 2158,
+    "escalated": false
+   },
+   {
+    "dossier": "H007",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "10/01/1981",
+      "got": "10/01/1987"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "10/01/2041",
+      "got": "10/01/2045"
+     }
+    ],
+    "cost_usd": 0.00234,
+    "seconds": 8.45,
+    "tokens_in": 12264,
+    "tokens_out": 2218,
+    "escalated": false
+   },
+   {
+    "dossier": "H008",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "07/05/1996",
+      "got": "01/05/1996"
+     }
+    ],
+    "cost_usd": 0.00251,
+    "seconds": 9.59,
+    "tokens_in": 12266,
+    "tokens_out": 2576,
+    "escalated": false
+   },
+   {
+    "dossier": "H009",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH",
+     "MISSING_FIELD"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "MISSING_FIELD"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 10
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "HOÀNG THANH HÀ",
+      "got": "HOANG THANH HA"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "02/12/1991",
+      "got": ""
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "sex",
+      "expected": "Nữ",
+      "got": "Nam"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "02/12/2031",
+      "got": ""
+     }
+    ],
+    "cost_usd": 0.00248,
+    "seconds": 8.95,
+    "tokens_in": 12266,
+    "tokens_out": 2505,
+    "escalated": false
+   },
+   {
+    "dossier": "H010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 11
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY NGÂN",
+      "got": "NGÔ THÚY NGÂN"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "20/03/1997",
+      "got": "20/10/1997"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "20/03/2037",
+      "got": "20/10/2037"
+     }
+    ],
+    "cost_usd": 0.00238,
+    "seconds": 8.73,
+    "tokens_in": 12258,
+    "tokens_out": 2300,
+    "escalated": false
+   }
+  ]
+ },
+ {
+  "strategy": "single:claude-sonnet-5-5",
+  "summary": {
+   "standard": {
+    "dossiers": 30,
+    "decision_accuracy_pct": 100.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 0.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 100.0,
+    "cost_per_dossier_usd": 0.0185,
+    "latency_p50_s": 4.54,
+    "latency_p95_s": 8.2,
+    "total_cost_usd": 0.5555,
+    "escalated": 0
+   },
+   "stress": {
+    "dossiers": 10,
+    "decision_accuracy_pct": 70.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 60.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 92.9,
+    "cost_per_dossier_usd": 0.024,
+    "latency_p50_s": 7.55,
+    "latency_p95_s": 8.56,
+    "total_cost_usd": 0.2397,
+    "escalated": 0
+   }
+  },
+  "rows": [
+   {
+    "dossier": "D001",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02401,
+    "seconds": 6.81,
+    "tokens_in": 12266,
+    "tokens_out": 946,
+    "escalated": false
+   },
+   {
+    "dossier": "D002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01813,
+    "seconds": 46.42,
+    "tokens_in": 6466,
+    "tokens_out": 967,
+    "escalated": false
+   },
+   {
+    "dossier": "D003",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02392,
+    "seconds": 8.2,
+    "tokens_in": 12258,
+    "tokens_out": 938,
+    "escalated": false
+   },
+   {
+    "dossier": "D004",
+    "defect": "INCOME_BELOW_MINIMUM",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01799,
+    "seconds": 5.06,
+    "tokens_in": 6584,
+    "tokens_out": 940,
+    "escalated": false
+   },
+   {
+    "dossier": "D005",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01799,
+    "seconds": 4.72,
+    "tokens_in": 6466,
+    "tokens_out": 953,
+    "escalated": false
+   },
+   {
+    "dossier": "D006",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01696,
+    "seconds": 4.28,
+    "tokens_in": 6350,
+    "tokens_out": 862,
+    "escalated": false
+   },
+   {
+    "dossier": "D007",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.0168,
+    "seconds": 3.97,
+    "tokens_in": 6334,
+    "tokens_out": 848,
+    "escalated": false
+   },
+   {
+    "dossier": "D008",
+    "defect": "DOB_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.0242,
+    "seconds": 6.56,
+    "tokens_in": 12270,
+    "tokens_out": 964,
+    "escalated": false
+   },
+   {
+    "dossier": "D009",
+    "defect": "MISSING_DOCUMENT",
+    "expected_decision": "incomplete",
+    "decision": "incomplete",
+    "decision_ok": true,
+    "expected_findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 2,
+    "classified_ok": 2,
+    "fields_total": {
+     "text": 9,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 9,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01162,
+    "seconds": 4.25,
+    "tokens_in": 4497,
+    "tokens_out": 561,
+    "escalated": false
+   },
+   {
+    "dossier": "D010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01693,
+    "seconds": 4.06,
+    "tokens_in": 6516,
+    "tokens_out": 841,
+    "escalated": false
+   },
+   {
+    "dossier": "D011",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.018,
+    "seconds": 4.51,
+    "tokens_in": 6620,
+    "tokens_out": 938,
+    "escalated": false
+   },
+   {
+    "dossier": "D012",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01786,
+    "seconds": 5.84,
+    "tokens_in": 6600,
+    "tokens_out": 926,
+    "escalated": false
+   },
+   {
+    "dossier": "D013",
+    "defect": "PAYSLIP_NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01804,
+    "seconds": 4.62,
+    "tokens_in": 6616,
+    "tokens_out": 942,
+    "escalated": false
+   },
+   {
+    "dossier": "D014",
+    "defect": "AGE_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01806,
+    "seconds": 4.45,
+    "tokens_in": 6620,
+    "tokens_out": 944,
+    "escalated": false
+   },
+   {
+    "dossier": "D015",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01812,
+    "seconds": 4.15,
+    "tokens_in": 6474,
+    "tokens_out": 965,
+    "escalated": false
+   },
+   {
+    "dossier": "D016",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01678,
+    "seconds": 3.91,
+    "tokens_in": 6496,
+    "tokens_out": 829,
+    "escalated": false
+   },
+   {
+    "dossier": "D017",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01823,
+    "seconds": 4.53,
+    "tokens_in": 6640,
+    "tokens_out": 958,
+    "escalated": false
+   },
+   {
+    "dossier": "D018",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01829,
+    "seconds": 4.56,
+    "tokens_in": 6644,
+    "tokens_out": 964,
+    "escalated": false
+   },
+   {
+    "dossier": "D019",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.0181,
+    "seconds": 4.05,
+    "tokens_in": 6454,
+    "tokens_out": 965,
+    "escalated": false
+   },
+   {
+    "dossier": "D020",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01816,
+    "seconds": 4.75,
+    "tokens_in": 6468,
+    "tokens_out": 969,
+    "escalated": false
+   },
+   {
+    "dossier": "D021",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01672,
+    "seconds": 4.0,
+    "tokens_in": 6328,
+    "tokens_out": 840,
+    "escalated": false
+   },
+   {
+    "dossier": "D022",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01808,
+    "seconds": 4.58,
+    "tokens_in": 6456,
+    "tokens_out": 963,
+    "escalated": false
+   },
+   {
+    "dossier": "D023",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01796,
+    "seconds": 4.48,
+    "tokens_in": 6620,
+    "tokens_out": 934,
+    "escalated": false
+   },
+   {
+    "dossier": "D024",
+    "defect": "EMPLOYER_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01692,
+    "seconds": 4.08,
+    "tokens_in": 6350,
+    "tokens_out": 858,
+    "escalated": false
+   },
+   {
+    "dossier": "D025",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01795,
+    "seconds": 4.58,
+    "tokens_in": 6462,
+    "tokens_out": 949,
+    "escalated": false
+   },
+   {
+    "dossier": "D026",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01809,
+    "seconds": 4.67,
+    "tokens_in": 6466,
+    "tokens_out": 963,
+    "escalated": false
+   },
+   {
+    "dossier": "D027",
+    "defect": "AMOUNT_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01685,
+    "seconds": 4.09,
+    "tokens_in": 6504,
+    "tokens_out": 835,
+    "escalated": false
+   },
+   {
+    "dossier": "D028",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02392,
+    "seconds": 18.31,
+    "tokens_in": 12258,
+    "tokens_out": 938,
+    "escalated": false
+   },
+   {
+    "dossier": "D029",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02404,
+    "seconds": 8.0,
+    "tokens_in": 12256,
+    "tokens_out": 950,
+    "escalated": false
+   },
+   {
+    "dossier": "D030",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.01676,
+    "seconds": 4.33,
+    "tokens_in": 6346,
+    "tokens_out": 842,
+    "escalated": false
+   },
+   {
+    "dossier": "H001",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02401,
+    "seconds": 6.81,
+    "tokens_in": 12262,
+    "tokens_out": 946,
+    "escalated": false
+   },
+   {
+    "dossier": "H002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02378,
+    "seconds": 7.89,
+    "tokens_in": 12262,
+    "tokens_out": 923,
+    "escalated": false
+   },
+   {
+    "dossier": "H003",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "22/07/1989",
+      "got": "22/07/1985"
+     }
+    ],
+    "cost_usd": 0.02405,
+    "seconds": 6.55,
+    "tokens_in": 12262,
+    "tokens_out": 950,
+    "escalated": false
+   },
+   {
+    "dossier": "H004",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 11
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY MAI",
+      "got": "NGÔ THÚY MAI"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1987",
+      "got": "16/07/1987"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "15/07/2027",
+      "got": "15/01/2027"
+     }
+    ],
+    "cost_usd": 0.02404,
+    "seconds": 7.59,
+    "tokens_in": 12256,
+    "tokens_out": 950,
+    "escalated": false
+   },
+   {
+    "dossier": "H005",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02363,
+    "seconds": 7.31,
+    "tokens_in": 12256,
+    "tokens_out": 909,
+    "escalated": false
+   },
+   {
+    "dossier": "H006",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1983",
+      "got": "10/07/1983"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "15/07/2043",
+      "got": "10/07/2043"
+     }
+    ],
+    "cost_usd": 0.02413,
+    "seconds": 7.51,
+    "tokens_in": 12264,
+    "tokens_out": 958,
+    "escalated": false
+   },
+   {
+    "dossier": "H007",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02417,
+    "seconds": 8.56,
+    "tokens_in": 12264,
+    "tokens_out": 962,
+    "escalated": false
+   },
+   {
+    "dossier": "H008",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "07/05/1996",
+      "got": "07/09/1996"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "07/05/2036",
+      "got": "07/09/2036"
+     }
+    ],
+    "cost_usd": 0.02423,
+    "seconds": 9.09,
+    "tokens_in": 12266,
+    "tokens_out": 968,
+    "escalated": false
+   },
+   {
+    "dossier": "H009",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH",
+     "MISSING_FIELD"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "MISSING_FIELD"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "sex",
+      "expected": "Nữ",
+      "got": ""
+     }
+    ],
+    "cost_usd": 0.02396,
+    "seconds": 7.95,
+    "tokens_in": 12266,
+    "tokens_out": 941,
+    "escalated": false
+   },
+   {
+    "dossier": "H010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY NGÂN",
+      "got": "NGÔ THÚY NGÂN"
+     }
+    ],
+    "cost_usd": 0.02373,
+    "seconds": 6.75,
+    "tokens_in": 12258,
+    "tokens_out": 919,
+    "escalated": false
+   }
+  ]
+ },
+ {
+  "strategy": "cascade",
+  "summary": {
+   "standard": {
+    "dossiers": 30,
+    "decision_accuracy_pct": 100.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 0.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 100.0,
+    "cost_per_dossier_usd": 0.0042,
+    "latency_p50_s": 4.67,
+    "latency_p95_s": 10.41,
+    "total_cost_usd": 0.1253,
+    "escalated": 10
+   },
+   "stress": {
+    "dossiers": 10,
+    "decision_accuracy_pct": 70.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 60.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 92.9,
+    "cost_per_dossier_usd": 0.0206,
+    "latency_p50_s": 12.98,
+    "latency_p95_s": 13.92,
+    "total_cost_usd": 0.2061,
+    "escalated": 10
+   }
+  },
+  "rows": [
+   {
+    "dossier": "D001",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00171,
+    "seconds": 5.66,
+    "tokens_in": 12266,
+    "tokens_out": 957,
+    "escalated": false
+   },
+   {
+    "dossier": "D002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 4.61,
+    "tokens_in": 6466,
+    "tokens_out": 978,
+    "escalated": false
+   },
+   {
+    "dossier": "D003",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.0202,
+    "seconds": 12.3,
+    "tokens_in": 18209,
+    "tokens_out": 1939,
+    "escalated": true
+   },
+   {
+    "dossier": "D004",
+    "defect": "INCOME_BELOW_MINIMUM",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "findings": [
+     "INCOME_BELOW_MINIMUM"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 4.38,
+    "tokens_in": 6584,
+    "tokens_out": 951,
+    "escalated": false
+   },
+   {
+    "dossier": "D005",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00125,
+    "seconds": 4.44,
+    "tokens_in": 6466,
+    "tokens_out": 1210,
+    "escalated": false
+   },
+   {
+    "dossier": "D006",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.78,
+    "tokens_in": 6350,
+    "tokens_out": 994,
+    "escalated": false
+   },
+   {
+    "dossier": "D007",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00569,
+    "seconds": 5.48,
+    "tokens_in": 7553,
+    "tokens_out": 1185,
+    "escalated": true
+   },
+   {
+    "dossier": "D008",
+    "defect": "DOB_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02022,
+    "seconds": 10.41,
+    "tokens_in": 18221,
+    "tokens_out": 1644,
+    "escalated": true
+   },
+   {
+    "dossier": "D009",
+    "defect": "MISSING_DOCUMENT",
+    "expected_decision": "incomplete",
+    "decision": "incomplete",
+    "decision_ok": true,
+    "expected_findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "findings": [
+     "MISSING_DOCUMENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 2,
+    "classified_ok": 2,
+    "fields_total": {
+     "text": 9,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 9,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00079,
+    "seconds": 3.91,
+    "tokens_in": 4497,
+    "tokens_out": 685,
+    "escalated": false
+   },
+   {
+    "dossier": "D010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.78,
+    "tokens_in": 6516,
+    "tokens_out": 964,
+    "escalated": false
+   },
+   {
+    "dossier": "D011",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.73,
+    "tokens_in": 6620,
+    "tokens_out": 1337,
+    "escalated": false
+   },
+   {
+    "dossier": "D012",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.0058,
+    "seconds": 5.7,
+    "tokens_in": 7819,
+    "tokens_out": 1518,
+    "escalated": true
+   },
+   {
+    "dossier": "D013",
+    "defect": "PAYSLIP_NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "findings": [
+     "PAYSLIP_NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00567,
+    "seconds": 6.16,
+    "tokens_in": 7835,
+    "tokens_out": 1171,
+    "escalated": true
+   },
+   {
+    "dossier": "D014",
+    "defect": "AGE_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AGE_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.25,
+    "tokens_in": 6620,
+    "tokens_out": 1337,
+    "escalated": false
+   },
+   {
+    "dossier": "D015",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00114,
+    "seconds": 3.52,
+    "tokens_in": 6474,
+    "tokens_out": 976,
+    "escalated": false
+   },
+   {
+    "dossier": "D016",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00131,
+    "seconds": 4.94,
+    "tokens_in": 6496,
+    "tokens_out": 1327,
+    "escalated": false
+   },
+   {
+    "dossier": "D017",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00115,
+    "seconds": 3.81,
+    "tokens_in": 6640,
+    "tokens_out": 969,
+    "escalated": false
+   },
+   {
+    "dossier": "D018",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.66,
+    "tokens_in": 6644,
+    "tokens_out": 1338,
+    "escalated": false
+   },
+   {
+    "dossier": "D019",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.8,
+    "tokens_in": 6454,
+    "tokens_out": 976,
+    "escalated": false
+   },
+   {
+    "dossier": "D020",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00573,
+    "seconds": 5.34,
+    "tokens_in": 7687,
+    "tokens_out": 1204,
+    "escalated": true
+   },
+   {
+    "dossier": "D021",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00111,
+    "seconds": 3.7,
+    "tokens_in": 6328,
+    "tokens_out": 963,
+    "escalated": false
+   },
+   {
+    "dossier": "D022",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00574,
+    "seconds": 5.2,
+    "tokens_in": 7675,
+    "tokens_out": 1191,
+    "escalated": true
+   },
+   {
+    "dossier": "D023",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00133,
+    "seconds": 4.67,
+    "tokens_in": 6620,
+    "tokens_out": 1336,
+    "escalated": false
+   },
+   {
+    "dossier": "D024",
+    "defect": "EMPLOYER_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "findings": [
+     "EMPLOYER_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 3.75,
+    "tokens_in": 6350,
+    "tokens_out": 981,
+    "escalated": false
+   },
+   {
+    "dossier": "D025",
+    "defect": "ID_NUMBER_INCONSISTENT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "findings": [
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00562,
+    "seconds": 5.97,
+    "tokens_in": 7681,
+    "tokens_out": 1174,
+    "escalated": true
+   },
+   {
+    "dossier": "D026",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00572,
+    "seconds": 7.0,
+    "tokens_in": 7685,
+    "tokens_out": 1189,
+    "escalated": true
+   },
+   {
+    "dossier": "D027",
+    "defect": "AMOUNT_OUT_OF_RANGE",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "findings": [
+     "AMOUNT_OUT_OF_RANGE"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00113,
+    "seconds": 4.08,
+    "tokens_in": 6504,
+    "tokens_out": 967,
+    "escalated": false
+   },
+   {
+    "dossier": "D028",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02019,
+    "seconds": 11.03,
+    "tokens_in": 18209,
+    "tokens_out": 2005,
+    "escalated": true
+   },
+   {
+    "dossier": "D029",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.00171,
+    "seconds": 7.56,
+    "tokens_in": 12256,
+    "tokens_out": 961,
+    "escalated": false
+   },
+   {
+    "dossier": "D030",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 14,
+     "scanned": 5
+    },
+    "fields_ok": {
+     "text": 14,
+     "scanned": 5
+    },
+    "field_misses": [],
+    "cost_usd": 0.00127,
+    "seconds": 4.53,
+    "tokens_in": 6346,
+    "tokens_out": 1266,
+    "escalated": false
+   },
+   {
+    "dossier": "H001",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02044,
+    "seconds": 11.39,
+    "tokens_in": 18213,
+    "tokens_out": 2693,
+    "escalated": true
+   },
+   {
+    "dossier": "H002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02057,
+    "seconds": 13.39,
+    "tokens_in": 18213,
+    "tokens_out": 2640,
+    "escalated": true
+   },
+   {
+    "dossier": "H003",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "22/07/1989",
+      "got": "22/07/1985"
+     }
+    ],
+    "cost_usd": 0.0205,
+    "seconds": 11.38,
+    "tokens_in": 18213,
+    "tokens_out": 2805,
+    "escalated": true
+   },
+   {
+    "dossier": "H004",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRY_IMPLAUSIBLE",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 11
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY MAI",
+      "got": "NGÔ THÚY MAI"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1987",
+      "got": "16/07/1987"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "15/07/2027",
+      "got": "15/01/2027"
+     }
+    ],
+    "cost_usd": 0.02056,
+    "seconds": 12.91,
+    "tokens_in": 18207,
+    "tokens_out": 2827,
+    "escalated": true
+   },
+   {
+    "dossier": "H005",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02075,
+    "seconds": 13.06,
+    "tokens_in": 18207,
+    "tokens_out": 3152,
+    "escalated": true
+   },
+   {
+    "dossier": "H006",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "15/07/1983",
+      "got": "10/07/1983"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "15/07/2043",
+      "got": "10/07/2043"
+     }
+    ],
+    "cost_usd": 0.02055,
+    "seconds": 12.5,
+    "tokens_in": 18215,
+    "tokens_out": 2792,
+    "escalated": true
+   },
+   {
+    "dossier": "H007",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.02062,
+    "seconds": 13.92,
+    "tokens_in": 18215,
+    "tokens_out": 2856,
+    "escalated": true
+   },
+   {
+    "dossier": "H008",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "DOB_MISMATCH",
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "DOB_MISMATCH"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "07/05/1996",
+      "got": "07/09/1996"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "07/05/2036",
+      "got": "07/09/2036"
+     }
+    ],
+    "cost_usd": 0.02088,
+    "seconds": 15.41,
+    "tokens_in": 18217,
+    "tokens_out": 3222,
+    "escalated": true
+   },
+   {
+    "dossier": "H009",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH",
+     "MISSING_FIELD"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "MISSING_FIELD"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "sex",
+      "expected": "Nữ",
+      "got": ""
+     }
+    ],
+    "cost_usd": 0.02057,
+    "seconds": 13.34,
+    "tokens_in": 18217,
+    "tokens_out": 3124,
+    "escalated": true
+   },
+   {
+    "dossier": "H010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY NGÂN",
+      "got": "NGÔ THÚY NGÂN"
+     }
+    ],
+    "cost_usd": 0.02068,
+    "seconds": 12.59,
+    "tokens_in": 18209,
+    "tokens_out": 2940,
+    "escalated": true
+   }
+  ]
+ },
+ {
+  "strategy": "single:claude-opus-5-5",
+  "summary": {
+   "stress": {
+    "dossiers": 10,
+    "decision_accuracy_pct": 70.0,
+    "defect_recall_pct": 100.0,
+    "false_review_rate_pct": 60.0,
+    "ready_with_wrong_data": 0,
+    "classification_accuracy_pct": 100.0,
+    "field_accuracy_text_pct": 100.0,
+    "field_accuracy_scanned_pct": 92.1,
+    "cost_per_dossier_usd": 0.0481,
+    "latency_p50_s": 9.96,
+    "latency_p95_s": 11.56,
+    "total_cost_usd": 0.4807,
+    "escalated": 0
+   }
+  },
+  "rows": [
+   {
+    "dossier": "H001",
+    "defect": "ID_EXPIRED",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_EXPIRED"
+    ],
+    "findings": [
+     "ID_EXPIRED"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.05011,
+    "seconds": 19.36,
+    "tokens_in": 12262,
+    "tokens_out": 1077,
+    "escalated": false
+   },
+   {
+    "dossier": "H002",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.05099,
+    "seconds": 11.08,
+    "tokens_in": 12262,
+    "tokens_out": 1121,
+    "escalated": false
+   },
+   {
+    "dossier": "H003",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRED",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "DOB_MISMATCH",
+     "ID_EXPIRED",
+     "ID_NUMBER_INCONSISTENT"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "22/07/1989",
+      "got": "22/01/1985"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "22/07/2029",
+      "got": "22/01/2025"
+     }
+    ],
+    "cost_usd": 0.04693,
+    "seconds": 11.56,
+    "tokens_in": 12262,
+    "tokens_out": 918,
+    "escalated": false
+   },
+   {
+    "dossier": "H004",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY MAI",
+      "got": "NGÔ THÚY MAI"
+     }
+    ],
+    "cost_usd": 0.04692,
+    "seconds": 10.7,
+    "tokens_in": 12256,
+    "tokens_out": 918,
+    "escalated": false
+   },
+   {
+    "dossier": "H005",
+    "defect": "DTI_ABOVE_LIMIT",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "findings": [
+     "DTI_ABOVE_LIMIT"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.04674,
+    "seconds": 8.95,
+    "tokens_in": 12256,
+    "tokens_out": 909,
+    "escalated": false
+   },
+   {
+    "dossier": "H006",
+    "defect": "INCOME_ABOVE_PAYSLIP",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "INCOME_ABOVE_PAYSLIP"
+    ],
+    "findings": [
+     "INCOME_ABOVE_PAYSLIP",
+     "MISSING_FIELD",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "MISSING_FIELD",
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 12
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "HỒ THÙY LAN",
+      "got": "HỒ THÚY LAN"
+     },
+     {
+      "document": "don-de-nghi-vay.pdf",
+      "field": "term_months",
+      "expected": "4 năm",
+      "got": ""
+     }
+    ],
+    "cost_usd": 0.04672,
+    "seconds": 8.88,
+    "tokens_in": 12264,
+    "tokens_out": 907,
+    "escalated": false
+   },
+   {
+    "dossier": "H007",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "ready_for_underwriting",
+    "decision_ok": true,
+    "expected_findings": [],
+    "findings": [],
+    "defect_found": false,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.04744,
+    "seconds": 10.28,
+    "tokens_in": 12264,
+    "tokens_out": 943,
+    "escalated": false
+   },
+   {
+    "dossier": "H008",
+    "defect": "NAME_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "NAME_MISMATCH"
+    ],
+    "findings": [
+     "NAME_MISMATCH"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 14
+    },
+    "field_misses": [],
+    "cost_usd": 0.04756,
+    "seconds": 9.64,
+    "tokens_in": 12266,
+    "tokens_out": 949,
+    "escalated": false
+   },
+   {
+    "dossier": "H009",
+    "defect": "ID_MISMATCH",
+    "expected_decision": "needs_review",
+    "decision": "needs_review",
+    "decision_ok": true,
+    "expected_findings": [
+     "ID_MISMATCH"
+    ],
+    "findings": [
+     "ID_MISMATCH",
+     "MISSING_FIELD"
+    ],
+    "defect_found": true,
+    "unexpected_findings": [
+     "MISSING_FIELD"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 9
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "date_of_birth",
+      "expected": "02/12/1991",
+      "got": ""
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "id_number",
+      "expected": "024191518141",
+      "got": "024191516141"
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "sex",
+      "expected": "Nữ",
+      "got": ""
+     },
+     {
+      "document": "cccd.pdf",
+      "field": "expiry_date",
+      "expected": "02/12/2031",
+      "got": ""
+     },
+     {
+      "document": "don-de-nghi-vay.pdf",
+      "field": "term_months",
+      "expected": "5 năm",
+      "got": ""
+     }
+    ],
+    "cost_usd": 0.0501,
+    "seconds": 8.45,
+    "tokens_in": 12266,
+    "tokens_out": 1076,
+    "escalated": false
+   },
+   {
+    "dossier": "H010",
+    "defect": "clean",
+    "expected_decision": "ready_for_underwriting",
+    "decision": "needs_review",
+    "decision_ok": false,
+    "expected_findings": [],
+    "findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "defect_found": false,
+    "unexpected_findings": [
+     "NAME_DIACRITICS_DIFFER"
+    ],
+    "documents": 3,
+    "classified_ok": 3,
+    "fields_total": {
+     "text": 5,
+     "scanned": 14
+    },
+    "fields_ok": {
+     "text": 5,
+     "scanned": 13
+    },
+    "field_misses": [
+     {
+      "document": "cccd.pdf",
+      "field": "full_name",
+      "expected": "NGÔ THÙY NGÂN",
+      "got": "NGÔ THÚY NGÂN"
+     }
+    ],
+    "cost_usd": 0.04716,
+    "seconds": 9.27,
+    "tokens_in": 12258,
+    "tokens_out": 930,
+    "escalated": false
+   }
+  ]
+ }
+]
