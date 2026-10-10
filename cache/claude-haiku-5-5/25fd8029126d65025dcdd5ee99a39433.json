@@ -1,0 +1,1 @@
+{"output": {"doc_type": "application_form"}, "usage": {"model": "claude-haiku-5-5", "step": "classify", "input_tokens": 821, "output_tokens": 15, "cache_read_tokens": 0, "cache_write_tokens": 0, "cost_usd": 8.960000000000001e-05, "seconds": 1.375}}

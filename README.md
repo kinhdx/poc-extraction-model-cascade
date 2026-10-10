@@ -103,10 +103,14 @@ Go, as a trial, under these conditions:
 
 ## Reproduce
 
-Clone this repository next to `loan-dossier-intake`, run that repository's evaluation once for Haiku and Sonnet
-and for Opus on the stress set (this fills its response cache), then:
+Clone this repository next to `loan-dossier-intake` (the pipeline and rules are imported from it), then:
 
 ```bash
 uv sync
-uv run python experiment/cascade.py
+uv run python experiment/cascade.py     # offline, from cache/; reproduces results/runs.json at no cost
 ```
+
+`cache/` holds the structured answers each model returned for the synthetic documents (values and quoted
+spans, no document images), keyed by a hash of the request. Any change to the prompts, schemas or documents
+in loan-dossier-intake changes the hashes; the script then stops and names the missing request, and
+`--allow-api` refills the cache.

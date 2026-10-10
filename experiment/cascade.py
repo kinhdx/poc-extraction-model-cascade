@@ -6,8 +6,8 @@ Strategies (classification always runs on the small model):
                   scan could cause, the scanned documents are extracted again by the large model and the rules
                   run again on the result
 
-Model responses come from the response cache that loan-dossier-intake's evaluation fills (var/cache), so the
-cascade sees exactly the answers each model gave in the single-model runs. By default the script never calls
+Model responses come from cache/, copied from the response cache that loan-dossier-intake's evaluation filled on
+10/10/2026, so the cascade sees exactly the answers each model gave in the single-model runs. By default the script never calls
 the API and stops at the first request that is not cached.
 
     uv run python experiment/cascade.py                 # offline, from the cache
@@ -25,7 +25,6 @@ from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 from loan_intake.checks import decide, run_checks
-from loan_intake.cli import VAR
 from loan_intake.documents import load_dir
 from loan_intake.evaluation.idp import FIXTURES, score_dossier, summarise
 from loan_intake.extract import read_document
@@ -34,7 +33,9 @@ from loan_intake.policy import load_thresholds
 from loan_intake.schemas import DossierResult, ExtractedDocument
 
 SMALL, LARGE, LARGEST = "claude-haiku-5-5", "claude-sonnet-5-5", "claude-opus-5-5"
-RESULTS = Path(__file__).resolve().parents[1] / "results"
+ROOT = Path(__file__).resolve().parents[1]
+RESULTS = ROOT / "results"
+CACHE = ROOT / "cache"  # model responses recorded during the loan-dossier-intake evaluation runs
 
 # Findings a misread on a scanned document can produce. Product-limit findings (DTI, amount, term) come from
 # text documents and are not a reason to re-read anything.
@@ -104,7 +105,7 @@ def main(argv: list[str] | None = None) -> int:
     load_dotenv(find_dotenv(usecwd=True))
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
-    client = CachingClient(AnthropicClient() if args.allow_api else CacheOnly(), VAR / "cache")
+    client = CachingClient(AnthropicClient() if args.allow_api else CacheOnly(), CACHE)
     runs = [run(f"single:{SMALL}", client), run(f"single:{LARGE}", client), run("cascade", client),
             run(f"single:{LARGEST}", client, prefix="H")]
     RESULTS.mkdir(exist_ok=True)
