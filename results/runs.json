@@ -2970,7 +2970,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00569,
-    "seconds": 5.48,
+    "seconds": 6.12,
     "tokens_in": 7553,
     "tokens_out": 1185,
     "escalated": true
@@ -3121,7 +3121,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.0058,
-    "seconds": 5.7,
+    "seconds": 6.84,
     "tokens_in": 7819,
     "tokens_out": 1518,
     "escalated": true
@@ -3152,7 +3152,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00567,
-    "seconds": 6.16,
+    "seconds": 6.6,
     "tokens_in": 7835,
     "tokens_out": 1171,
     "escalated": true
@@ -3353,7 +3353,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00573,
-    "seconds": 5.34,
+    "seconds": 5.62,
     "tokens_in": 7687,
     "tokens_out": 1204,
     "escalated": true
@@ -3411,7 +3411,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00574,
-    "seconds": 5.2,
+    "seconds": 5.53,
     "tokens_in": 7675,
     "tokens_out": 1191,
     "escalated": true
@@ -3504,7 +3504,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00562,
-    "seconds": 5.97,
+    "seconds": 6.14,
     "tokens_in": 7681,
     "tokens_out": 1174,
     "escalated": true
@@ -3535,7 +3535,7 @@
     },
     "field_misses": [],
     "cost_usd": 0.00572,
-    "seconds": 7.0,
+    "seconds": 7.02,
     "tokens_in": 7685,
     "tokens_out": 1189,
     "escalated": true

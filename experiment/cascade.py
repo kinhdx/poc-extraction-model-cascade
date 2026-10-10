@@ -54,25 +54,34 @@ def dossier_result(name: str, docs: list[ExtractedDocument], as_of: date) -> Dos
     return DossierResult(name, decide(findings), docs, findings, metrics)
 
 
-def single(folder: Path, client, model: str, as_of: date) -> tuple[DossierResult, bool]:
+def single(folder: Path, client, model: str, as_of: date) -> tuple[DossierResult, bool, float | None]:
     docs = [read_document(src, client, model, SMALL) for src in load_dir(folder)]
-    return dossier_result(folder.name, sorted(docs, key=lambda d: d.name), as_of), False
+    return dossier_result(folder.name, sorted(docs, key=lambda d: d.name), as_of), False, None
 
 
-def cascade(folder: Path, client, as_of: date) -> tuple[DossierResult, bool]:
+def _seconds(doc: ExtractedDocument) -> float:
+    return sum(u.seconds for u in doc.usage)
+
+
+def cascade(folder: Path, client, as_of: date) -> tuple[DossierResult, bool, float | None]:
+    """Returns the result, whether it escalated, and the critical-path latency of an escalated dossier: the
+    slowest first-pass read, then the slowest re-read, since the re-reads start only after the rules have run."""
     sources = {s.name: s for s in load_dir(folder)}
-    first, _ = single(folder, client, SMALL, as_of)
+    first, _, _ = single(folder, client, SMALL, as_of)
     if not ({f.code for f in first.findings} & SCAN_SENSITIVE) or not any(d.scanned for d in first.documents):
-        return first, False
-    docs = []
+        return first, False, None
+    docs, reread = [], []
     for doc in first.documents:
         if not doc.scanned:
             docs.append(doc)
             continue
         again = read_document(sources[doc.name], client, LARGE, SMALL)
         # The classification is reused in practice, so only the large model's extraction call is added.
-        docs.append(replace(again, usage=doc.usage + [u for u in again.usage if u.step == "extract"]))
-    return dossier_result(folder.name, docs, as_of), True
+        extract = [u for u in again.usage if u.step == "extract"]
+        reread.append(sum(u.seconds for u in extract))
+        docs.append(replace(again, usage=doc.usage + extract))
+    latency = max(_seconds(d) for d in first.documents) + max(reread)
+    return dossier_result(folder.name, docs, as_of), True, round(latency, 2)
 
 
 def run(strategy: str, client, prefix: str = "") -> dict:
@@ -82,10 +91,13 @@ def run(strategy: str, client, prefix: str = "") -> dict:
         expected = json.loads((folder / "expected.json").read_text(encoding="utf-8"))
         as_of = date.fromisoformat(expected["as_of"])
         if strategy == "cascade":
-            result, escalated = cascade(folder, client, as_of)
+            result, escalated, seconds = cascade(folder, client, as_of)
         else:
-            result, escalated = single(folder, client, strategy.split(":", 1)[1], as_of)
-        return {**score_dossier(result, expected), "escalated": escalated}
+            result, escalated, seconds = single(folder, client, strategy.split(":", 1)[1], as_of)
+        row = {**score_dossier(result, expected), "escalated": escalated}
+        if seconds is not None:
+            row["seconds"] = seconds
+        return row
 
     with ThreadPoolExecutor(max_workers=4) as pool:
         rows = list(pool.map(one, folders))

@@ -6,7 +6,7 @@
 | Time box | One week |
 | Status | Concluded, 10/10/2026 |
 | Decision | **Go, as a trial** in back-office intake, with the conditions below |
-| System under test | [loan-dossier-intake](https://github.com/kinhdx/loan-dossier-intake) at commit `dc6b2b4` |
+| System under test | [loan-dossier-intake](https://github.com/kinhdx/loan-dossier-intake) at commit `7460dad` (model responses recorded at `dc6b2b4`; prompts and documents are unchanged between the two) |
 
 ## Why this question
 
